@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",  // Schema version for VS Code tasks
+    "tasks": [
+        {
+            "label": "Compile",  // Name of the task
+            "type": "shell",     // Type of task (runs in shell)
+            "command": "make",   // Command to execute
+            "group": {
+                "kind": "build",    // Group this task under 'build' category
+                "isDefault": true   // Make this the default build task
+            },
+            "problemMatcher": ["$gcc"]  // Use GCC problem matcher for error parsing
+        },
+        {
+            "label": "Clean",          // Name of the clean task
+            "type": "shell",           // Type of task (runs in shell)
+            "command": "make clean",   // Command to clean build artifacts
+            "problemMatcher": []       // No problem matcher needed for clean
+        }
+    ]
+}

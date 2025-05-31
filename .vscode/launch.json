@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",  // Configuration version
+    "configurations": [
+        {
+            "name": "GDB Launch",  // Name of the debug configuration
+            "type": "cppdbg",      // Debugger type (C++ Debug)
+            "request": "launch",   // Launch the program for debugging
+            "program": "${workspaceFolder}/buggy_program",  // Program to debug
+            "args": [],             // Command line arguments
+            "stopAtEntry": true,    // Stop at the beginning of the program
+            "cwd": "${workspaceFolder}",  // Working directory
+            "externalConsole": false,  // Use VS Code's integrated terminal
+            "internalConsoleOptions": "neverOpen",  // Don't open debug console automatically
+            "MIMode": "gdb",       // Use GDB as the debugger
+            "miDebuggerPath": "/usr/bin/gdb",  // Path to GDB
+            "setupCommands": [      // Commands to configure GDB
+                {
+                    "description": "Enable pretty-printing for GDB",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true  // Continue even if pretty-printing fails
+                }
+            ],
+            "preLaunchTask": "Compile"  // Build task to run before debugging
+        }
+    ]
+}

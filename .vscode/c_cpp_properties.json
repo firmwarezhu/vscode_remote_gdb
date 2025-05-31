@@ -1,0 +1,16 @@
+{
+  "configurations": [    // Array of different configuration environments
+    {
+      "name": "linux-gcc-x64",    // Configuration name for Linux GCC on x64 architecture
+      "intelliSenseMode": "linux-gcc-x64",    // VS Code's code analysis mode matching compiler
+      "compilerPath": "/usr/bin/gcc",    // Path to the GCC compiler executable
+      "includePath": [    // Array of paths for header file lookup
+        "${workspaceFolder}/**",    // Recursively includes all subdirectories
+        "${workspaceFolder}"        // Includes the workspace root directory
+      ],
+      "cStandard": "c11",          // C language standard (C11 from 2011)
+      "cppStandard": "c++14"       // C++ language standard (C++14 from 2014)
+    }
+  ],
+  "version": 4    // Configuration file format version
+}
